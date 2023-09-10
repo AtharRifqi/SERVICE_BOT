@@ -3,11 +3,11 @@
 #include <UniversalTelegramBot.h>
 #include <ArduinoJson.h>
 
-////
+//// ganti sesuai punya lu sendiri
 #define ssid "Athar"
 #define password "pat13456"   
 
-////
+//// ganti sesuai punya lu sendiri
 #define BOTtoken "6307094638:AAFTzUA_fKXjoLu0IZxW36fl-BuDZaVXgE8"  
 #define idAnda "6348922504"
 
@@ -16,7 +16,7 @@ const int pompa = 14;
 #define setpoint    65    // setpoint 
 #define trigger     0     // 0 karena pake relay low act
 #define durasiPompa 3000  
-bool Mode = 1; // 1 mode otomatis 0 mode manual
+bool Mode = 1; // 1 mode otomatis 0 mode manual. (ini mode harus gua define lebih jelas si, tapi gua bingung sendiri malah.)
 
 //// 
 X509List cert(TELEGRAM_CERTIFICATE_ROOT); // tadi ditambahin ini
@@ -26,7 +26,6 @@ UniversalTelegramBot bot(BOTtoken, client);
 ////
 const unsigned long BOT_MTBS = 1500; 
 unsigned long bot_lasttime;  
-
 int persen = 0;
 
 //// setup connection udah bisa
@@ -121,8 +120,8 @@ void handleNewMessages(int numNewMessages)
 
     if (text == "/start")
     {
-      String welcome = "Selamat datang tuan" + from_name + ".\n";
-      welcome += "Ini adalah bot penyiram tanaman dari Athar dan Reinsen \n\n";
+      String welcome = "Selamat datang" + from_name + ".\n";
+      welcome += "Ini adalah bot penyiram tanaman\n\n";
       welcome += "/manual untuk masuk ke mode manual\n";
       welcome += "/otomatis untuk masuk ke mode otomatis\n";
       welcome += "/status untuk cek status kelembaban tanah\n";
