@@ -8,8 +8,8 @@
 #define password "XXXXXX"   
 
 //// ganti sesuai punya lu sendiri
-#define BOTtoken "XXXXXXXX"  
-#define idAnda "XXXXXXXX"
+#define BOTtoken "XXXXXXXX"  // dapetin bot token dari lu create bot lu sendiri di botfather telegram.
+#define idAnda "XXXXXXXX"  // dapetin id telegram lu sendiri dari idbot telegram.
 
 ////
 const int pompa = 14;
