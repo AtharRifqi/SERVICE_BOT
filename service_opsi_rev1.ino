@@ -3,30 +3,28 @@
 #include <UniversalTelegramBot.h>
 #include <ArduinoJson.h>
 
-//// ganti sesuai punya lu sendiri
+//// wifi credentials ganti sesuai punya lu sendiri
 #define ssid "XXXXXX"
 #define password "XXXXXX"   
 
-//// ganti sesuai punya lu sendiri
+//// telegram credentials ganti sesuai punya lu sendiri
 #define BOTtoken "XXXXXXXX"  // dapetin bot token dari lu create bot lu sendiri di botfather telegram.
 #define idAnda "XXXXXXXX"  // dapetin id telegram lu sendiri dari idbot telegram.
 
 ////
 const int pompa = 14;
-#define setpoint    65    // setpoint 
+#define setpoint    65    // setpoint in percentage
 #define trigger     0     // 0 karena pake relay low act
-#define durasiPompa 3000  
-bool Mode = 1; // 1 mode otomatis 0 mode manual. (ini mode harus gua define lebih jelas si, tapi gua bingung sendiri malah.)
-
-//// 
-X509List cert(TELEGRAM_CERTIFICATE_ROOT); // tadi ditambahin ini
-WiFiClientSecure client;
-UniversalTelegramBot bot(BOTtoken, client);
-
-////
+#define durasiPompa 3000 
 const unsigned long BOT_MTBS = 1500; 
 unsigned long bot_lasttime;  
 int persen = 0;
+bool Mode = 1; // 1 mode otomatis 0 mode manual. (ini mode harus gua define lebih jelas si, tapi gua bingung sendiri malah.)
+
+//// 
+X509List cert(TELEGRAM_CERTIFICATE_ROOT); 
+WiFiClientSecure client;
+UniversalTelegramBot bot(BOTtoken, client);
 
 //// setup connection udah bisa
 void setup() {
@@ -77,7 +75,7 @@ void setup() {
 }
 
 
-//// function handle new message masih bermasalah 
+//// function handle new message masih bermasalah gatau masalah dimana
 void handleNewMessages(int numNewMessages) 
 {
   Serial.println("handleNewMessages");
