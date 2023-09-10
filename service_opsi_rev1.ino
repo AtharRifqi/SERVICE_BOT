@@ -4,12 +4,12 @@
 #include <ArduinoJson.h>
 
 //// ganti sesuai punya lu sendiri
-#define ssid "Athar"
-#define password "pat13456"   
+#define ssid "XXXXXX"
+#define password "XXXXXX"   
 
 //// ganti sesuai punya lu sendiri
-#define BOTtoken "6307094638:AAFTzUA_fKXjoLu0IZxW36fl-BuDZaVXgE8"  
-#define idAnda "6348922504"
+#define BOTtoken "XXXXXXXX"  
+#define idAnda "XXXXXXXX"
 
 ////
 const int pompa = 14;
